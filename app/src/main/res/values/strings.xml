@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NanoSoft-Test</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="red">RED</string>
+    <string name="blue">BLUE</string>
+    <string name="green">GREEN</string>
+    <string name="title_activity_maps">MyLocation</string>
+    <string name="title_activity_multiple_marker_ploting_on_maps">Marker Ploting</string>
+</resources>
