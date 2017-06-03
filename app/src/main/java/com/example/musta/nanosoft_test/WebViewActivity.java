@@ -18,12 +18,14 @@ public class WebViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_webview);
         dbHelper = new SQLiteDBHelper(this);
         Cursor data = dbHelper.getNameColumn(1);
-        do {
-            name = data.getString(data.getColumnIndex("NAME"));
-            age = data.getString(data.getColumnIndex("AGE"));
-            latitude = data.getString(data.getColumnIndex("LATITUDE"));
-            longitude = data.getString(data.getColumnIndex("LONGITUDE"));
-        } while (data.moveToFirst());
+        if (data.moveToFirst()) {
+            do {
+                name = data.getString(data.getColumnIndex("NAME"));
+                age = data.getString(data.getColumnIndex("AGE"));
+                latitude = data.getString(data.getColumnIndex("LATITUDE"));
+                longitude = data.getString(data.getColumnIndex("LONGITUDE"));
+            } while (data.moveToNext());
+        }
         mWebView = (WebView) findViewById(R.id.webView);
         String htmlString = "<html><body>" +
                 "<h2>Name: " + name + "</h2>\n" +

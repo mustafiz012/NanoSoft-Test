@@ -98,6 +98,7 @@
             android:src="@drawable/fab_add"
             app:fab_label="ViewPager Sample"
             app:fab_size="mini" />
+
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/menu_item_webview"
             android:layout_width="wrap_content"

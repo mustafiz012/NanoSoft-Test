@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fbCurrentLocation = (FloatingActionButton) findViewById(R.id.menu_item_current_location);
         fbSavedLocationPlotting = (FloatingActionButton) findViewById(R.id.menu_item_saved_location);
         fbWebViewExample = (FloatingActionButton) findViewById(R.id.menu_item_webview);
-        fbViewPagerSample.setOnClickListener(this);
+        fbWebViewExample.setOnClickListener(this);
         fbSavedLocationPlotting.setOnClickListener(this);
         fbCurrentLocation.setOnClickListener(this);
         fbViewPagerSample.setOnClickListener(this);
@@ -119,16 +119,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, MapsActivity.class));
                 break;
             }
-            case R.id.menu_item_saved_location:{
+            case R.id.menu_item_saved_location: {
                 floatingActionMenu.toggle(true);
                 Intent intent = new Intent(this, MultipleMarkerPlottingOnMapsActivity.class);
                 startActivity(intent);
-                Bundle bundle = new Bundle();
-                //bundle.putString("",);
-                //intent.putExtras();
                 break;
             }
-            case R.id.menu_item_webview:{
+            case R.id.menu_item_webview: {
+                Log.i("webview", "wrong?");
+                floatingActionMenu.toggle(true);
                 startActivity(new Intent(this, WebViewActivity.class));
                 break;
             }

@@ -58,11 +58,6 @@ public class SQLiteDBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "SELECT * FROM " + TABLE_NAME+" WHERE ID = "+rowId;
         Cursor data = db.rawQuery(query, null);
-        /*if (data.moveToFirst()){
-            do {
-
-            }while (data.moveToNext());
-        }*/
         return data;
     }
 }
